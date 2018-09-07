@@ -29,7 +29,7 @@ Initializr 에서 제공된 파일 실행 시에는 그레들 빌드 시에 프�
 ## 80. 트러블슈팅
 
 #### Intellij - gradle : `Unable to resolve org.springframework.aqmp:spring-amqp:2.0..RELEASE`
- gradle 에서 해당 라이브러리를 가져오지 못하는 게 문제라고 가정했기 때문에 처음 시도한 방법은 터미널에서 `gradle clean build -x test --refresh-dependencies --stacktrace` 를 실행했다. 하지만 빌드가 성공했고 별다른 오류 메세지도 출력되지 않았다. 때문에 `IntelliJ` 의 문제라고 판단하여 IDE 의 로그를 보니 아래와 같은 로그를 찾을 수 있었다.
+ gradle 에서 해당 라이브러리를 가져오지 못하는 게 문제라고 가정했기 때문에 처음 시도한 방법은 터미널에서 `gradle clean build -x test --refresh-dependencies --stacktrace` 를 실행했다. 하지만 빌드가 성공했고 별다른 오류 메세지도 출력되지 않았다. 때문에 IDE의 문제라고 판단하여 IDE 로그를 보니 아래와 같은 구문을 찾을 수 있었다.
  ```
  2018-09-07 14:04:24,556 [ 606132]   INFO - xecution.GradleExecutionHelper - Passing command-line args to Gradle Tooling API: -Didea.version=2018.1.3 -Didea.resolveSourceSetDependencies=true -Djava.awt.headless=true -Pandroid.injected.build.model.only=true -Pandroid.injected.build.model.only.advanced=true -Pandroid.injected.invoked.from.ide=true -Pandroid.injected.build.model.only.versioned=3 --init-script /private/var/folders/w7/c3mkf3h514dc86cc4l72q8mm0000gn/T/ijinit.gradle --offline 
 2018-09-07 14:04:38,421 [ 619997]   INFO - .project.GradleProjectResolver - Gradle project resolve error 
