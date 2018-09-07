@@ -34,8 +34,15 @@ dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter')
 	compile('org.springframework.cloud:spring-cloud-stream')
 	compile('org.springframework.data:spring-data-rest-hal-browser')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile('org.springframework.amqp:spring-amqp')
+//    compile group: 'org.springframework.cloud', name: 'spring-cloud-stream-binder-rabbit', version: '2.0.1.RELEASE'
+//    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-stream-rabbit', version: '2.0.1.RELEASE'
+
+
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.cloud:spring-cloud-stream-test-support')
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-amqp', version: '2.0.4.RELEASE'
 }
 
 dependencyManagement {

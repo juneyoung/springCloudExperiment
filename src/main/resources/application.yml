@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    stream:
+      bindings:
+        exp-sink:
+          destination: cloudexp
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: quest
+    password: quest
+
