@@ -21,5 +21,9 @@ Spring cloud experiment for beginner
 [스택오버플로우 질의](https://stackoverflow.com/questions/26577805/spring-boot-gradle-plugin-cant-be-found) 처럼 `dependency-management` 를 사용하는 방법이 있다는데 안됨. 
 일단은 클라우드의 기능을 확인하는 것이 목표라 Initializr 로 진행 
 
+#### IDEA IDE 사용시 gradle 오류
+Initializr 에서 제공된 파일 실행 시에는 그레들 빌드 시에 프록시 문제로 gradle sync 오류가 발생함.
+[공식문서](https://docs.gradle.org/current/userguide/userguide_single.html#sec:accessing_the_web_via_a_proxy) 처럼 gradle.properties 를 수정해주면 오류가 나지 않는다.
+
 ## 99. 내역
 - 20180907 초안 작성중
