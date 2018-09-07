@@ -37,7 +37,7 @@ org.gradle.tooling.BuildException: Could not run build action using Gradle distr
 	at org.gradle.tooling.internal.consumer.ExceptionTransformer.transform(ExceptionTransformer.java:51)
 	at org.gradle.tooling.internal.consumer.ExceptionTransformer.transform(ExceptionTransformer.java:29)
  ```
-`4.8.11` 이라는 항목을 본 순간, 해당 부분이 `gradle-wrapper.properties` 항목에 있는 게 기억이 났고, `use local gradle distribution` 항목에 체크를 하고 머신에 있는 4.10 버전의 홈으로 연결해서 정상적으로 연동이 가능해졌다.
+`4.8.11` 이라는 항목을 본 순간, 해당 부분이 `gradle-wrapper.properties` 항목에 있는 게 기억이 났고, 프로젝트 내 빌드  `use local gradle distribution` 항목에 체크를 하고 머신에 있는 4.10 버전의 홈으로 연결해서 정상적으로 연동이 가능해졌다.
 
 ## 99. 내역
 - 20180907 초안 작성중
