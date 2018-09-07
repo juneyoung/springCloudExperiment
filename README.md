@@ -10,6 +10,7 @@ Spring cloud experiment for beginner
 ## 02. 시작하기
 
 #### 기본 의존 라이브러리
+아래 2 가지 방법 중 하나로 클라우드 프로젝트를 생성할 수 있음. 
 
 - [Spring Initializr](https://start.spring.io) : 의존성에 `Web`, `Cloud Bootstrap`, `Cloud Stream`, `Rest Repositories HAL Browser` 추가하였음
 - [Spring Cloud Quick Start](https://projects.spring.io/spring-cloud/) : 생성되는 `build.gradle` 을 사용
