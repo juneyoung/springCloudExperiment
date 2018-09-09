@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import ch.qos.logback.classic.Logger;
 
-@EnableRabbit   //https://stackoverflow.com/questions/46922056/failed-to-start-bean-org-springframework-amqp-rabbit-config-internalrabbitliste
+//@EnableRabbit   //https://stackoverflow.com/questions/46922056/failed-to-start-bean-org-springframework-amqp-rabbit-config-internalrabbitliste
 @Configuration
 public class RabbitConfig {
 
