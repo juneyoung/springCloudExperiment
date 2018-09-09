@@ -69,6 +69,7 @@ $ > rabbitmqctl change_password guest guest
 $ > rabbitmqctl set_permissions -p / guest ".*" ".*" ".*"
 ```
 레드헷 쪽 포럼에서 찾았음 : 
+- [레빗 공식](https://www.rabbitmq.com/rabbitmqctl.8.html)
 - [링크 1](https://access.redhat.com/solutions/2172871)
 - [링크 2](https://gist.github.com/sdieunidou/1813409ddfd0185c82c7)
 
