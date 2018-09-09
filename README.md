@@ -68,7 +68,9 @@ $ > rabbitmqctl change_password guest guest
 # 퍼미션 추가 - 이 부분은 무슨 프로세스인지 확인 필요 
 $ > rabbitmqctl set_permissions -p / guest ".*" ".*" ".*"
 ```
-레드헷 쪽 포럼에서 찾았음 : [링크](https://access.redhat.com/solutions/2172871)
+레드헷 쪽 포럼에서 찾았음 : 
+- [링크 1](https://access.redhat.com/solutions/2172871)
+- [링크 2](https://gist.github.com/sdieunidou/1813409ddfd0185c82c7)
 
 ## 99. 내역
 - 20180907 초안 작성중
