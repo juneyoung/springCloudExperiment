@@ -46,9 +46,29 @@ org.gradle.tooling.BuildException: Could not run build action using Gradle distr
 ```
 com.rabbitmq.client.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
 ```
-해결 중 ...
+그래서 broker log 파일을 보니 아래와 같은 구문을 찾을 수 있었음 
+```
+2018-09-09 15:55:32.307 [error] <0.406.0> Error on AMQP connection <0.406.0> ([::1]:50156 -> [::1]:5672, state: starting):
+PLAIN login refused: user 'guest' - invalid credentials
+```
+수정방법
+```
+# 사용자 목록 출력. guest 사용자가 존재하지 않았음
+$ > rabbitmqctl list_users
 
+# 사용자 추가 
+$ > rabbitmqctl add_user guest guest
 
+# 사용자에게 관리자 권한 부여
+$ > rabbitmqcrl set_user_tags guest administator
+
+# 사용자 비밀번호 변경
+$ > rabbitmqctl change_password guest guest
+
+# 퍼미션 추가 - 이 부분은 무슨 프로세스인지 확인 필요 
+$ > rabbitmqctl set_permissions -p / guest ".*" ".*" ".*"
+```
+레드헷 쪽 포럼에서 찾았음 : [링크](https://access.redhat.com/solutions/2172871)
 
 ## 99. 내역
 - 20180907 초안 작성중
